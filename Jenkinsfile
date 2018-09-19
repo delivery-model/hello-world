@@ -1,6 +1,5 @@
 pipeline {
     agent any
-    stages {
         stage('build') {
                withMaven(
         		maven: 'M3',
@@ -8,5 +7,4 @@ pipeline {
       					sh "mvn clean install"
 			}
 		}
-	}
 }
